@@ -7,7 +7,7 @@ Installation
 ```bash
 sudo apt install sqlmap
 ```
-lance :
+Passons aux tests :
 ```bash
 sqlmap -u "http://example.com/page.php?id=1" --batch --level=3 --risk=2
 ```
